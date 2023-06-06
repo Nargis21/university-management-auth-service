@@ -10,9 +10,9 @@
 
   "rules": {
     "no-unused-vars": "error",
-    "consistent-type-definitions": ["error", "type"],
-    "no-console": "error",
-    "no-undef": "error",
+    // "consistent-type-definitions": ["error", "type"],
+    "no-console": "warn",
+    // "no-undef": "error",
     "no-unused-expressions": "error",
     "no-unreachable": "error"
   },
