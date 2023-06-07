@@ -1,0 +1,12 @@
+{
+  errno: undefined,
+  code: 'ECONNREFUSED',
+  syscall: 'querySrv',
+  hostname: '_mongodb._tcp.cluster0.n1j80p8.mongodb.net',
+  level: 'error',
+  message: '❌ Failed to Connect querySrv ECONNREFUSED _mongodb._tcp.cluster0.n1j80p8.mongodb.net',
+  stack: 'Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.n1j80p8.mongodb.net\n' +
+    '    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:251:17)',
+  label: 'UMS',
+  timestamp: '2023-06-07T13:43:49.563Z'
+}

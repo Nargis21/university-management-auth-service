@@ -1,8 +1,11 @@
-import express, { Application, Request, Response } from 'express'
+import express, { Application } from 'express'
 import cors from 'cors'
 const app: Application = express()
+import config from './config/index'
 
-import userRouter from './app/modules/user/user.route'
+import { UserRoutes } from './app/modules/user/user.route'
+import globalErrorHandler from './app/middlewares/globalErrorHandler'
+// import ApiError from './errors/ApiError'
 
 app.use(cors())
 
@@ -11,11 +14,21 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 //Application routes
-app.use('/api/v1/user', userRouter)
+app.use('/api/v1/user', UserRoutes)
+
+console.log(app.get('env'))
+console.log(config.node_env)
 
 //Testing
-app.get('/', (req: Request, res: Response) => {
-  res.send('Hello World!')
-})
+// app.get('/', (req: Request, res: Response, next: NextFunction) => {
+//   // res.send('Working Successfully')
+//   // throw new Error()
+//   // throw new ApiError(400, 'Custom Message')
+//   // next('Next Custom Error') //count as error
+//   // Promise.reject(new Error('Unhandled Promise Rejection'))
+// })
+
+//global error handler -- this is for synchronous api request
+app.use(globalErrorHandler)
 
 export default app
