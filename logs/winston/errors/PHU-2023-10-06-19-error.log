@@ -22,3 +22,9 @@
   label: 'UMS',
   timestamp: '2023-06-10T13:26:46.816Z'
 }
+{
+  statusCode: 409,
+  level: 'error',
+  label: 'UMS',
+  timestamp: '2023-06-10T13:56:42.213Z'
+}
