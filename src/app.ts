@@ -1,23 +1,22 @@
-import express, { Application } from 'express'
-import cors from 'cors'
-const app: Application = express()
-import config from './config/index'
-
-import { UserRoutes } from './app/modules/user/user.route'
-import globalErrorHandler from './app/middlewares/globalErrorHandler'
+import express, { Application } from 'express';
+import cors from 'cors';
+const app: Application = express();
+import config from './config/index';
+import globalErrorHandler from './app/middlewares/globalErrorHandler';
+import routes from './app/routes';
 // import ApiError from './errors/ApiError'
 
-app.use(cors())
+app.use(cors());
 
 //parser
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 //Application routes
-app.use('/api/v1/user', UserRoutes)
+app.use('/api/v1', routes);
 
-console.log(app.get('env'))
-console.log(config.node_env)
+console.log(app.get('env'));
+console.log(config.node_env);
 
 //Testing
 // app.get('/', (req: Request, res: Response, next: NextFunction) => {
@@ -29,6 +28,6 @@ console.log(config.node_env)
 // })
 
 //global error handler -- this is for synchronous api request
-app.use(globalErrorHandler)
+app.use(globalErrorHandler);
 
-export default app
+export default app;
