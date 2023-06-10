@@ -5,6 +5,7 @@ import config from './config/index';
 
 import { UserRoutes } from './app/modules/user/user.route';
 import globalErrorHandler from './app/middlewares/globalErrorHandler';
+import { AcademicSemesterRoutes } from './app/modules/academicSemester/academicSemester.route';
 // import ApiError from './errors/ApiError'
 
 app.use(cors());
@@ -15,6 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 
 //Application routes
 app.use('/api/v1/user', UserRoutes);
+app.use('/api/v1/academic-semester', AcademicSemesterRoutes);
 
 console.log(app.get('env'));
 console.log(config.node_env);
