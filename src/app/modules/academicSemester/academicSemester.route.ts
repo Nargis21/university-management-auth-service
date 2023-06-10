@@ -1,5 +1,4 @@
 import express from 'express';
-// import { UserController } from './user.controller';
 import validateRequest from '../../middlewares/validateRequest';
 import { AcademicSemesterValidation } from './academicSemester.validation';
 import { AcademicSemesterController } from './academicSemester.controller';

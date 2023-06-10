@@ -1,0 +1,12 @@
+{
+  statusCode: 400,
+  level: 'error',
+  label: 'UMS',
+  timestamp: '2023-06-10T12:37:19.407Z'
+}
+{
+  statusCode: 400,
+  level: 'error',
+  label: 'UMS',
+  timestamp: '2023-06-10T12:40:12.568Z'
+}
