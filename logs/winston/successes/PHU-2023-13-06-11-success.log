@@ -2,59 +2,47 @@
   message: '✅ Database Connected',
   level: 'info',
   label: 'UMS',
-  timestamp: '2023-06-10T14:02:30.871Z'
+  timestamp: '2023-06-13T05:43:37.579Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'UMS',
-  timestamp: '2023-06-10T14:02:30.900Z'
+  timestamp: '2023-06-13T05:43:37.609Z'
 }
 {
   message: '✅ Database Connected',
   level: 'info',
   label: 'UMS',
-  timestamp: '2023-06-10T14:03:42.689Z'
+  timestamp: '2023-06-13T05:49:57.897Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'UMS',
-  timestamp: '2023-06-10T14:03:42.712Z'
+  timestamp: '2023-06-13T05:49:57.920Z'
 }
 {
   message: '✅ Database Connected',
   level: 'info',
   label: 'UMS',
-  timestamp: '2023-06-10T14:06:41.018Z'
+  timestamp: '2023-06-13T05:51:42.174Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'UMS',
-  timestamp: '2023-06-10T14:06:41.049Z'
+  timestamp: '2023-06-13T05:51:42.201Z'
 }
 {
   message: '✅ Database Connected',
   level: 'info',
   label: 'UMS',
-  timestamp: '2023-06-10T14:07:19.372Z'
+  timestamp: '2023-06-13T05:56:02.869Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'UMS',
-  timestamp: '2023-06-10T14:07:19.396Z'
-}
-{
-  message: '✅ Database Connected',
-  level: 'info',
-  label: 'UMS',
-  timestamp: '2023-06-10T14:12:45.139Z'
-}
-{
-  message: 'Application listening on port 5000',
-  level: 'info',
-  label: 'UMS',
-  timestamp: '2023-06-10T14:12:45.166Z'
+  timestamp: '2023-06-13T05:56:02.897Z'
 }
