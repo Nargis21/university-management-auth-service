@@ -41,7 +41,23 @@ const getAllSemester = catchAsync(
   }
 );
 
+const getSemesterById = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
+    const id = req.params.id;
+    const result = await AcademicSemesterService.getSemesterById(id);
+
+    sendResponse<IAcademicSemester>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Academic semester retrieved successfully',
+      data: result,
+    });
+    next();
+  }
+);
+
 export const AcademicSemesterController = {
   createSemester,
   getAllSemester,
+  getSemesterById,
 };
