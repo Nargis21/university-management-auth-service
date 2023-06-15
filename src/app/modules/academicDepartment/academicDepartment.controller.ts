@@ -31,13 +31,41 @@ const getAllDepartments = catchAsync(async (req: Request, res: Response) => {
   sendResponse<IAcademicDepartment[]>(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: 'Academic department retrieved successfully',
+    message: 'Academic departments retrieved successfully',
     meta: result.meta,
     data: result.data,
+  });
+});
+
+const getDepartmentById = catchAsync(async (req: Request, res: Response) => {
+  const id = req.params.id;
+  const result = await AcademicDepartmentService.getDepartmentById(id);
+  sendResponse<IAcademicDepartment>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Academic department retrieved successfully',
+    data: result,
+  });
+});
+
+const updateDepartment = catchAsync(async (req: Request, res: Response) => {
+  const id = req.params.id;
+  const updatedData = req.body;
+  const result = await AcademicDepartmentService.updateDepartment(
+    id,
+    updatedData
+  );
+  sendResponse<IAcademicDepartment>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Academic department updated successfully',
+    data: result,
   });
 });
 
 export const AcademicDepartmentController = {
   createDepartment,
   getAllDepartments,
+  getDepartmentById,
+  updateDepartment,
 };

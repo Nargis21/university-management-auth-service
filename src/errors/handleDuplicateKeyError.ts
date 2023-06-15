@@ -13,7 +13,7 @@ const handleDuplicateKeyError = (error: MongoServerError) => {
 
   return {
     statusCode: httpStatus.CONFLICT,
-    message: 'Academic faculty already exist',
+    message: 'Data already exist',
     errorMessages: errors,
   };
 };
