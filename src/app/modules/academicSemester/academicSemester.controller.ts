@@ -46,6 +46,7 @@ const getSemesterById = catchAsync(async (req: Request, res: Response) => {
     data: result,
   });
 });
+
 const updateSemester = catchAsync(async (req: Request, res: Response) => {
   const id = req.params.id;
   const updatedData = req.body;
@@ -59,6 +60,7 @@ const updateSemester = catchAsync(async (req: Request, res: Response) => {
     data: result,
   });
 });
+
 const deleteSemester = catchAsync(async (req: Request, res: Response) => {
   const id = req.params.id;
 
