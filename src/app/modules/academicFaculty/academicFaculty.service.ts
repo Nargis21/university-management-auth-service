@@ -86,10 +86,8 @@ const updateFaculty = async (
   return result;
 };
 
-const deleteFaculty = async (
-  payload: string
-): Promise<IAcademicFaculty | null> => {
-  const result = await AcademicFaculty.findByIdAndDelete(payload);
+const deleteFaculty = async (id: string): Promise<IAcademicFaculty | null> => {
+  const result = await AcademicFaculty.findByIdAndDelete(id);
   return result;
 };
 
