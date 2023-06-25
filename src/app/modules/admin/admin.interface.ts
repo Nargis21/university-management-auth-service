@@ -1,6 +1,5 @@
 import { Model, Types } from 'mongoose';
-import { IAcademicDepartment } from '../academicDepartment/academicDepartment.interface';
-import { IAcademicFaculty } from '../academicFaculty/academicFaculty.interface';
+import { IManagementDepartment } from '../managementDepartment/managementDepartment.interface';
 
 type UserName = {
   firstName: string;
@@ -8,7 +7,7 @@ type UserName = {
   lastName?: string;
 };
 
-export type IFaculty = {
+export type IAdmin = {
   id: string;
   name: UserName;
   dateOfBirth: string;
@@ -20,22 +19,20 @@ export type IFaculty = {
   presentAddress: string;
   bloodGroup?: 'A+' | 'A-' | 'B+' | 'B-' | 'AB+' | 'AB-' | 'O+' | 'O-';
   designation: string;
-  academicDepartment: Types.ObjectId | IAcademicDepartment;
-  academicFaculty: Types.ObjectId | IAcademicFaculty;
+  managementDepartment: Types.ObjectId | IManagementDepartment;
   profileImage?: string;
 };
 
-export type IFacultyFilters = {
+export type IAdminFilters = {
   searchTerm?: string;
   id?: string;
   email?: string;
   contactNo?: string;
   emergencyContactNo?: string;
-  gender?: 'male' | 'female';
+  gender?: 'Male' | 'Female';
   bloodGroup?: 'A+' | 'A-' | 'B+' | 'B-' | 'AB+' | 'AB-' | 'O+' | 'O-';
-  academicDepartment?: string;
-  academicFaculty?: string;
+  managementDepartment?: string;
   designation?: string;
 };
 
-export type FacultyModel = Model<IFaculty, object>;
+export type AdminModel = Model<IAdmin, object>;

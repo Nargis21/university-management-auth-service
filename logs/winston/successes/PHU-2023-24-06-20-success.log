@@ -2,11 +2,11 @@
   message: '✅ Database Connected',
   level: 'info',
   label: 'UMS',
-  timestamp: '2023-06-23T14:00:07.080Z'
+  timestamp: '2023-06-24T14:13:11.842Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'UMS',
-  timestamp: '2023-06-23T14:00:07.106Z'
+  timestamp: '2023-06-24T14:13:11.867Z'
 }
