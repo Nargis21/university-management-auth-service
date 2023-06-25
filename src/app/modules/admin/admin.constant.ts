@@ -1,6 +1,6 @@
 export const gender = ['Male', 'Female'];
 export const bloodGroup = ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'];
-export const facultyFilterableFields = [
+export const adminFilterableFields = [
   'searchTerm',
   'id',
   'email',
@@ -9,10 +9,9 @@ export const facultyFilterableFields = [
   'gender',
   'bloodGroup',
   'designation',
-  'academicFaculty',
-  'academicDepartment',
+  'managementDepartment',
 ];
-export const facultySearchableFields = [
+export const adminSearchableFields = [
   'id',
   'email',
   'contactNo',

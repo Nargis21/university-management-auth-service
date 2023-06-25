@@ -51,7 +51,7 @@ export type IStudentFilters = {
   email?: string;
   contactNo?: string;
   emergencyContactNo?: string;
-  bloodGroup?: string;
+  bloodGroup?: 'A+' | 'A-' | 'B+' | 'B-' | 'AB+' | 'AB-' | 'O+' | 'O-';
 };
 
 export type StudentModel = Model<IStudent, object>;
