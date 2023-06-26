@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-this-alias */
 import { Schema, model } from 'mongoose';
-import { IUser, IUserMethods, UserModel } from './user.interface';
+import { IUser, UserModel } from './user.interface';
 import config from '../../../config';
 import bcrypt from 'bcrypt';
 // 2. Create a Schema corresponding to the document interface.
-const userSchema = new Schema<IUser, object, IUserMethods>(
+const UserSchema = new Schema<IUser, UserModel>(
   {
     id: { type: String, required: true, unique: true },
     role: { type: String, required: true },
@@ -22,20 +22,33 @@ const userSchema = new Schema<IUser, object, IUserMethods>(
   }
 );
 
-userSchema.methods.isUserExist = async function (
+UserSchema.statics.isUserExist = async function (
   id: string
-): Promise<Partial<IUser> | null> {
+): Promise<Pick<IUser, 'id' | 'password' | 'passwordChange'> | null> {
   return await User.findOne({ id }, { id: 1, password: 1, passwordChange: 1 });
 };
 
-userSchema.methods.isPasswordMatched = async function (
+UserSchema.statics.isPasswordMatched = async function (
   givenPassword: string,
   savedPassword: string
 ): Promise<boolean> {
   return await bcrypt.compare(givenPassword, savedPassword);
 };
 
-userSchema.pre('save', async function (next) {
+// userSchema.methods.isUserExist = async function (
+//   id: string
+// ): Promise<Partial<IUser> | null> {
+//   return await User.findOne({ id }, { id: 1, password: 1, passwordChange: 1 });
+// };
+
+// userSchema.methods.isPasswordMatched = async function (
+//   givenPassword: string,
+//   savedPassword: string
+// ): Promise<boolean> {
+//   return await bcrypt.compare(givenPassword, savedPassword);
+// };
+
+UserSchema.pre('save', async function (next) {
   //hash password
   const user = this;
   user.password = await bcrypt.hash(
@@ -45,4 +58,4 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
-export const User = model<IUser, UserModel>('User', userSchema);
+export const User = model<IUser, UserModel>('User', UserSchema);
