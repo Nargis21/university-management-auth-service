@@ -6,16 +6,6 @@
     "auditLog": "C:\\level2\\ums\\university-management-auth-service\\logs\\winston\\errors\\.4d1dc30015818498f28c06ca28c23a0b8377bc50-audit.json",
     "files": [
         {
-            "date": 1687696748995,
-            "name": "C:\\level2\\ums\\university-management-auth-service\\logs\\winston\\errors\\PHU-2023-25-06-18-error.log",
-            "hash": "2869ee2ebf0a65e997c7608975ddebc03dd1d4a5757705d88ab353b9f797f7ab"
-        },
-        {
-            "date": 1687698163306,
-            "name": "C:\\level2\\ums\\university-management-auth-service\\logs\\winston\\errors\\PHU-2023-25-06-19-error.log",
-            "hash": "9c7056b240e83e7ce479f851998a2a10048a5a7136f6c0d282847b7692c6b878"
-        },
-        {
             "date": 1687754254416,
             "name": "C:\\level2\\ums\\university-management-auth-service\\logs\\winston\\errors\\PHU-2023-26-06-10-error.log",
             "hash": "651f7cbcbcb8379d89984f9f49ba19c2125710626f5e74afdb259992868759f6"
@@ -44,6 +34,21 @@
             "date": 1687773828558,
             "name": "C:\\level2\\ums\\university-management-auth-service\\logs\\winston\\errors\\PHU-2023-26-06-16-error.log",
             "hash": "28be2dce48414a4b690c12be621dd7b89f3c8e76fc3eaa6430c9833f3cc1e925"
+        },
+        {
+            "date": 1687786403294,
+            "name": "C:\\level2\\ums\\university-management-auth-service\\logs\\winston\\errors\\PHU-2023-26-06-19-error.log",
+            "hash": "d0c9cbc5a54f8e1948dcab427db2b907a935163ea83b1d29256b4a6986147a00"
+        },
+        {
+            "date": 1687788801170,
+            "name": "C:\\level2\\ums\\university-management-auth-service\\logs\\winston\\errors\\PHU-2023-26-06-20-error.log",
+            "hash": "05b607342c3182ecdd9b214762c9c1a94285c22b3b0fbda4fa1d9b073dfa76e0"
+        },
+        {
+            "date": 1687791952974,
+            "name": "C:\\level2\\ums\\university-management-auth-service\\logs\\winston\\errors\\PHU-2023-26-06-21-error.log",
+            "hash": "eceb402ebb57aecf79a49abdcef88d8394916e2376254648d9309edd58999a71"
         }
     ],
     "hashType": "sha256"
