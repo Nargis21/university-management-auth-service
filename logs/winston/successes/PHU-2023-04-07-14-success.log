@@ -46,3 +46,15 @@
   label: 'UMS',
   timestamp: '2023-07-04T08:46:11.612Z'
 }
+{
+  message: '✅ Database Connected',
+  level: 'info',
+  label: 'UMS',
+  timestamp: '2023-07-04T08:48:38.450Z'
+}
+{
+  message: 'Application listening on port 5000',
+  level: 'info',
+  label: 'UMS',
+  timestamp: '2023-07-04T08:48:38.478Z'
+}
