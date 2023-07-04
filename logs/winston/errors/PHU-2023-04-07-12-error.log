@@ -1,0 +1,13 @@
+{
+  level: 'error',
+  message: '❌ Failed to Connect connection 1 to 100.26.30.37:27017 closed',
+  stack: 'MongoNetworkError: connection 1 to 100.26.30.37:27017 closed\n' +
+    '    at Connection.onClose (C:\\level2\\ums\\university-management-auth-service\\node_modules\\mongodb\\src\\cmap\\connection.ts:320:24)\n' +
+    '    at TLSSocket.<anonymous> (C:\\level2\\ums\\university-management-auth-service\\node_modules\\mongodb\\src\\cmap\\connection.ts:245:42)\n' +
+    '    at TLSSocket.emit (node:events:513:28)\n' +
+    '    at node:net:322:12\n' +
+    '    at TCP.done (node:_tls_wrap:588:7)',
+  label: 'UMS',
+  timestamp: '2023-07-04T06:43:42.334Z',
+  [Symbol(errorLabels)]: Set(2) { 'RetryableWriteError', 'ResetPool' }
+}

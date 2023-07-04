@@ -9,7 +9,8 @@ const UserSchema = new Schema<IUser, UserModel>(
     id: { type: String, required: true, unique: true },
     role: { type: String, required: true },
     password: { type: String, required: true, select: 0 },
-    passwordChange: { type: Boolean, default: false },
+    passwordChanged: { type: Boolean, default: false },
+    passwordChangedAt: { type: Date },
     student: { type: Schema.Types.ObjectId, ref: 'Student' },
     faculty: { type: Schema.Types.ObjectId, ref: 'Faculty' },
     admin: { type: Schema.Types.ObjectId, ref: 'Admin' },
@@ -24,10 +25,10 @@ const UserSchema = new Schema<IUser, UserModel>(
 
 UserSchema.statics.isUserExist = async function (
   id: string
-): Promise<Pick<IUser, 'id' | 'password' | 'passwordChange' | 'role'> | null> {
+): Promise<Pick<IUser, 'id' | 'password' | 'passwordChanged' | 'role'> | null> {
   return await User.findOne(
     { id },
-    { id: 1, password: 1, passwordChange: 1, role: 1 }
+    { id: 1, password: 1, passwordChanged: 1, role: 1 }
   );
 };
 
@@ -58,6 +59,10 @@ UserSchema.pre('save', async function (next) {
     user.password,
     Number(config.bcrypt_salt_rounds)
   );
+
+  if (user.passwordChanged) {
+    user.passwordChangedAt = new Date();
+  }
   next();
 });
 
